@@ -1,0 +1,10 @@
+[apc]
+extension="apc.so"
+apc.enable_cli=1
+
+[memcache]
+extension="memcache.so"
+
+[memcached]
+extension="memcached.so"
+

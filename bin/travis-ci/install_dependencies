@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+PHP_INI=`php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+DIRNAME="`dirname \"$0\"`"
+
+echo "Updating environment"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 16126D3A3E5C1192 >/dev/null 2>&1
+sudo apt-get update -qq
+
+echo "Installing libraries"
+echo " - libmemcached"
+sudo apt-get install -qq libmemcached-dev libmemcached10 libevent-dev >/dev/null
+
+echo "Installing php-extensions"
+for package in apc-beta memcache memcached
+do
+    echo " - $package"
+	pecl install $package < $DIRNAME/pecl_answer_defaults.txt
+done
+
+cat $DIRNAME/php_ini_template.txt >> $PHP_INI
