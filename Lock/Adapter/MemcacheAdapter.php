@@ -9,14 +9,14 @@ namespace Perbility\Bundle\LockBundle\Lock\Adapter;
 use Memcache;
 
 /**
- * A distributed lock-adapter bult ontop of Memcache
+ * A distributed lock-adapter built ontop of Memcache
  * 
  * @author "Benjamin Zikarsky <benjamin.zikarsky@perbility.de>"
  */
 class MemcacheAdapter implements AdapterInterface
 {
     /**
-     * Default timeout to retry lock in ms
+     *  Default timeout before acquiration is retried in ms
      */
     const DEFAULT_TIMEOUT = 20;
     
@@ -69,7 +69,7 @@ class MemcacheAdapter implements AdapterInterface
     
     /*
      * (non-PHPdoc) @see \Perbility\Bundle\DistributedLockBundle\Lock\Adapter\AdapterInterface::isLocked()
-    */
+     */
     public function isLocked($name)
     {
         return (bool) $this->memcache->get($name);

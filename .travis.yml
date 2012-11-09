@@ -7,8 +7,6 @@ services: memcache
 
 before_script:
   - composer install --dev
-  - pecl install memcache
-   - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
 
 script: phpunit --coverage-text
 
