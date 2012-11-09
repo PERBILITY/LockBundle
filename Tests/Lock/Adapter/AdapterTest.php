@@ -15,8 +15,16 @@ use Perbility\Bundle\LockBundle\Lock\Adapter\AdapterInterface;
 use LogicException;
 use PHPUnit_Framework_TestCase;
 
+/**
+ * Standard test cases which every adapter needs to pass
+ * 
+ * @author Benjamin Zikarsky <benjamin.zikarsky@perbility.de>
+ */
 abstract class AdapterTest extends PHPUnit_Framework_TestCase
 {
+    /**
+     * @var Perbility\Bundle\LockBundle\Lock\Adapter\AdapterInterface
+     */
     protected $adapter;
     
     abstract protected function getAdapter();
@@ -43,7 +51,6 @@ abstract class AdapterTest extends PHPUnit_Framework_TestCase
 		}
 	}
 
-    
     public function testAcquire()
     {
         $this->assertTrue($this->adapter->acquire("test1", false));

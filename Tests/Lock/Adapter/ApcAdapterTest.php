@@ -11,14 +11,14 @@
 
 namespace Perbility\Bundle\LockBundle\Tests\Lock\Adapter;
 
-use Perbility\Bundle\LockBundle\Lock\Adapter\MockAdapter;
+use Perbility\Bundle\LockBundle\Lock\Adapter\ApcAdapter;
 
 /**
- * MockAdapter-Test
+ * ApcAdapter-Test
  * 
  * @author Benjamin Zikarsky <benjamin.zikarsky@perbility.de>
  */
-class MockAdapterTest extends AdapterTest
+class ApcAdapterTest extends AdapterTest
 {
 	/* 
 	 * (non-PHPdoc)
@@ -26,7 +26,7 @@ class MockAdapterTest extends AdapterTest
      */
     protected function getAdapter()
     {
-        return new MockAdapter();
+        return new ApcAdapter();
     }
     
 }

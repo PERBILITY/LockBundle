@@ -14,9 +14,19 @@ namespace Perbility\Bundle\LockBundle\Tests\Lock\Adapter;
 use Perbility\Bundle\LockBundle\Lock\Adapter\MemcacheAdapter;
 use Memcache;
 
+/**
+ * MemcacheAdapter Test
+ * 
+ * @author "Benjamin Zikarsky <benjamin.zikarsky@perbility.de>"
+ */
 class MemcacheAdapterTest extends AdapterTest
 {
     
+    /**
+     * Memcache instance
+     * 
+     * @var \Memcache
+     */
     protected $memcache;
     
 	public function setUp() 
@@ -34,7 +44,8 @@ class MemcacheAdapterTest extends AdapterTest
 	}
 
     
-	/* (non-PHPdoc)
+	/* 
+	 * (non-PHPdoc)
      * @see \Perbility\Bundle\LockBundle\Tests\Lock\Adapter\AdapterTest::getAdapter()
      */
     protected function getAdapter()
