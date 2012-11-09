@@ -1,0 +1,23 @@
+{
+    "name": "perbility/lock-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle provides an API for creating locks with various backends.",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/security-bundle": "2.1.*",
+        "php": ">=5.4"
+    },
+    "authors": [
+        {
+            "name": "Benjamin Zikarsky",
+            "email": "benjamin.zikarsky@perbility.de"
+        }
+    ],
+     "autoload": {
+        "psr-0": {
+            "Perbility\\Bundle\\LockBundle": ""
+        }
+    },
+    "target-dir": "Perbility/Bundle/LockBundle"
+}
