@@ -7,8 +7,15 @@ services: memcache
 
 before_script:
   - composer install --dev
+  - pecl install memcache
+  - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+  - pecl install apc-beta
+  - echo "[apc]" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+  - echo "extension=apc.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+  - echo "apc.enable_cli=1" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+  
 
-script: phpunit --coverage-text
+script: phpunit --coverage-text --verbose
 
 notifications:
   email:
