@@ -11,15 +11,15 @@
 
 namespace Perbility\Bundle\LockBundle\Tests\Lock\Adapter;
 
-use Perbility\Bundle\LockBundle\Lock\Adapter\MemcacheAdapter;
-use Memcache;
+use Perbility\Bundle\LockBundle\Lock\Adapter\MemcachedAdapter;
+use Memcached;
 
 /**
  * MemcacheAdapter Test
  * 
  * @author "Benjamin Zikarsky <benjamin.zikarsky@perbility.de>"
  */
-class MemcacheAdapterTest extends AdapterTest
+class MemcachedAdapterTest extends AdapterTest
 {
 	/* 
 	 * (non-PHPdoc)
@@ -27,16 +27,15 @@ class MemcacheAdapterTest extends AdapterTest
      */
     protected function getAdapter()
     {
-        if (!extension_loaded("memcache")) {
-            $this->markTestSkipped("Memcache extension is not available");
+        if (!extension_loaded("memcached")) {
+            $this->markTestSkipped("Memcached extension is not available");
         }
         
-        $memcache = new Memcache();
-        if (!$memcache->addserver("localhost", 11211)) {
+        $memcached = new Memcached();
+        if (!$memcached->addserver("localhost", 11211)) {
             $this->markTestSkipped("Cannot establish memcache connection on localhost:11211");
         }
-        
-        return new MemcacheAdapter($memcache);
+        return new MemcachedAdapter($memcached);
     }
 
     

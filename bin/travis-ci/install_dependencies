@@ -9,10 +9,10 @@ sudo apt-get update -qq
 
 echo "Installing libraries"
 echo " - libmemcached"
-sudo apt-get install -qq libmemcached-dev libmemcached10 libevent-dev >/dev/null
+sudo apt-get install -qq libmemcached-dev libmemcached10 libevent-dev php5-memcached >/dev/null
 
 echo "Installing php-extensions"
-for package in apc-beta memcache memcached
+for package in apc-beta memcache
 do
     echo " - $package"
 	pecl install $package < $DIRNAME/pecl_answer_defaults.txt

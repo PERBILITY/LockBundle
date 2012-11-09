@@ -26,6 +26,10 @@ class ApcAdapterTest extends AdapterTest
      */
     protected function getAdapter()
     {
+        if (!extension_loaded("apc")) {
+            $this->markTestSkipped("apc extension is not available");
+        }
+        
         return new ApcAdapter();
     }
     
