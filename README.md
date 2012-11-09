@@ -1,4 +1,4 @@
 DistributedLockBundle
 =====================
 
-This bundle provides an PI for creating distributed locks with various backends
+This bundle provides an API for creating distributed locks with various backends
