@@ -9,7 +9,7 @@ sudo apt-get update -qq
 
 echo "Installing libraries"
 echo " - libmemcached"
-sudo apt-get install -qq libmemcached-dev libmemcached10 libevent-dev php5-memcached >/dev/null
+sudo apt-get install -qq libmemcached-dev libmemcached10 libevent-dev php5-memcached
 
 echo "Installing php-extensions"
 for package in apc-beta memcache

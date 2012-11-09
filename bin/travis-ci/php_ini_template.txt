@@ -1,3 +1,4 @@
 [apc]
 apc.enable_cli=1
 
+extension=memcached.so
