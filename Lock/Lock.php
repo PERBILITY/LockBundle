@@ -12,7 +12,6 @@
 namespace Perbility\Bundle\LockBundle\Lock;
 
 use Perbility\Bundle\LockBundle\Lock\Adapter\AdapterInterface;
-use Perbility\Bundle\LockBundle\Lock\Adapter\LockAdapter;
 use InvalidArgumentException;
 
 class Lock

@@ -1,7 +1,5 @@
 <?php
 
-use Perbility\Bundle\LockBundle\Tests\Mocks\MockAdapter;
-
 /*
  * This file is part of the PerbilityLockBundle package.
  *

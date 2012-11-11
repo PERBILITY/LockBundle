@@ -13,3 +13,5 @@ app/config/parameters.ini
 /.settings
 /.buildpath
 /.project
+/nbproject
+/composer.lock
