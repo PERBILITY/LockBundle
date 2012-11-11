@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the PerbilityDistributedLockBundle package. 
+ * This file is part of the PerbilityLockBundle package. 
  * 
  * (c) PERBILITY GmbH <http://www.perbility.de> For the
  * 
